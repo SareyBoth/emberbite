@@ -1,0 +1,5 @@
+
+# Local agent secrets and scratch files
+.agents/mcp_config.json
+scratch/
+

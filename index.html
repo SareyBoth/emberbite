@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmberBite — Flame Burgers, Crispy Fried Chicken & Wood-Fired Fast Bites</title>
+  <meta name="description" content="Fast-food perfected. Sizzling flame smash burgers, Nashville crispy fried chicken, loaded cheesy bacon fries, artisan wood-fired pizza & thick craft shakes.">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/emberbite-flame-seal.svg">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <span>Flame smash burgers, crispy chicken & wood-fired pizza &nbsp;•&nbsp; <strong>Code "EMBER20" for 20% off feasts</strong> &nbsp;•&nbsp; Delivery in 25–35 min</span>
+  </div>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-link" aria-label="EmberBite Home">
+        <img src="assets/logos/emberbite-wordmark.svg" alt="EmberBite" class="brand-logo" width="180" height="38">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="pages/menu.html" class="nav-link">The Menu</a>
+        <a href="pages/deals.html" class="nav-link">Hot Deals</a>
+        <a href="pages/about.html" class="nav-link">Our Story</a>
+        <a href="pages/stores.html" class="nav-link">Locations</a>
+        <a href="pages/reviews.html" class="nav-link">Reviews</a>
+        <a href="pages/catering.html" class="nav-link">Catering</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-toggle-btn" data-cart-toggle aria-label="View Order Bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span>Order Bag</span>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="pages/menu.html" class="btn btn--primary btn--sm">Order Now</a>
+
+        <button type="button" class="mobile-menu-btn" data-mobile-menu-toggle aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobile-nav-drawer" style="display: none;" class="mobile-drawer" role="dialog" aria-label="Mobile Navigation">
+    <nav style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; background: var(--bg-elevated); border-bottom: 1px solid var(--border-subtle);">
+      <a href="pages/menu.html" class="nav-link">The Menu</a>
+      <a href="pages/deals.html" class="nav-link">Hot Deals</a>
+      <a href="pages/about.html" class="nav-link">Our Story</a>
+      <a href="pages/stores.html" class="nav-link">Locations</a>
+      <a href="pages/reviews.html" class="nav-link">Reviews</a>
+      <a href="pages/catering.html" class="nav-link">Catering</a>
+      <a href="pages/contact.html" class="nav-link">Contact & Reservations</a>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>Carroll Gardens & West Village · Open Daily</span>
+          </div>
+          <h1 class="hero-title">
+            Flame-Grilled Burgers, Crispy Chicken & Wood-Fired Slices. <span class="accent">Crafted in Brooklyn.</span>
+          </h1>
+          <p class="hero-lead">
+            Fresh Angus smash patties with melted cheddar, 24-hour buttermilk fried chicken, loaded bacon fries, and wood-fired sourdough pizzas cooked to order.
+          </p>
+          <div class="hero-actions">
+            <a href="pages/menu.html" class="btn btn--primary btn--lg">Order Menu</a>
+            <a href="pages/deals.html" class="btn btn--secondary btn--lg">Weekend Deals</a>
+          </div>
+          <div class="hero-perks">
+            <div class="hero-perk-item">
+              <span class="hero-perk-dot"></span>
+              <span>Express delivery within 3.5 miles</span>
+            </div>
+            <div class="hero-perk-item">
+              <span class="hero-perk-dot"></span>
+              <span>Counter pickup in 15–20 minutes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-wrapper">
+            <img src="assets/images/fastfood-hero-feast.png" alt="EmberBite fast food feast with juicy flame smash burger, golden crispy fried chicken, hot salted fries, and cold drink" width="560" height="420" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Mode Switcher -->
+    <div class="container">
+      <div class="order-mode-bar">
+        <div class="order-mode-toggle" role="group" aria-label="Order Mode">
+          <button type="button" class="order-mode-btn active" data-mode="delivery">Delivery</button>
+          <button type="button" class="order-mode-btn" data-mode="pickup">Store Pickup</button>
+        </div>
+        <div class="order-mode-details">
+          <div class="order-mode-meta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span><strong>Deliver to:</strong> 182 DeGraw St, Carroll Gardens (Within 3.5 mi)</span>
+          </div>
+          <div class="order-mode-meta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span><strong>Time:</strong> ASAP (25-35 mins)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter Carousel -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+          <span class="section-eyebrow">Cooked to Order</span>
+          <h2 class="section-title">On the Menu</h2>
+        </div>
+        <nav class="category-nav" aria-label="Menu Categories">
+          <button type="button" class="category-pill active" data-category="all">Full Menu</button>
+          <button type="button" class="category-pill" data-category="burgers">Flame Burgers</button>
+          <button type="button" class="category-pill" data-category="chicken">Crispy Chicken</button>
+          <button type="button" class="category-pill" data-category="sides">Loaded Fries & Sides</button>
+          <button type="button" class="category-pill" data-category="pizzas">Wood-Fired Pizza</button>
+          <button type="button" class="category-pill" data-category="shakes">Shakes & Drinks</button>
+        </nav>
+
+        <!-- Product Cards Grid -->
+        <div class="product-grid" id="main-product-grid">
+          <!-- Card 1: Double Smash Burger -->
+          <article class="product-card" data-category="burgers">
+            <div class="product-card__thumb">
+              <img src="assets/images/burger-flame-double.png" alt="Smoky Ember Double Smash Burger" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--ember">Bestseller</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Smoky Ember Double Smash Burger</h3>
+              <p class="product-card__desc">Two 100% Angus patties smashed with caramelized onions, double American cheddar melt, dill pickles, and secret Ember sauce on toasted brioche.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$15.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="flame-craft-burger">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Crispy Fried Chicken -->
+          <article class="product-card" data-category="chicken">
+            <div class="product-card__thumb">
+              <img src="assets/images/fried-chicken-crispy.png" alt="Nashville Hot & Crispy Fried Chicken" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--ember">Crowd Favorite</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Nashville Hot & Crispy Fried Chicken</h3>
+              <p class="product-card__desc">Buttermilk-brined fresh chicken fried to golden shatter-crunch, dusted with cayenne hot honey spices, served with dill pickles and ranch.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$14.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="crispy-fire-chicken">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Ultimate Fast Combo Box -->
+          <article class="product-card" data-category="burgers">
+            <div class="product-card__thumb">
+              <img src="assets/images/combo-feast-box.png" alt="The Ultimate Ember Fast Combo" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--honey">Best Value</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">The Ultimate Ember Fast Combo</h3>
+              <p class="product-card__desc">Double Flame Smash Burger, 2 Jumbo Crispy Chicken Tenders, seasoned golden french fries, house dipping sauces, and a cold drink.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$19.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="combo-feast-box">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Loaded Fries -->
+          <article class="product-card" data-category="sides">
+            <div class="product-card__thumb">
+              <img src="assets/images/loaded-ember-fries.png" alt="Smoky Loaded Cheese & Bacon Fries" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--ember">House Favorite</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Smoky Loaded Cheese & Bacon Fries</h3>
+              <p class="product-card__desc">Crisp seasoned skin-on french fries blanketed with warm melted cheddar sauce, applewood bacon crumbles, scallions, and smoky aioli.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$8.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="loaded-ember-fries">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Charred Pepperoni Pizza -->
+          <article class="product-card" data-category="pizzas">
+            <div class="product-card__thumb">
+              <img src="assets/images/pizza-hot-honey-card.png" alt="Charred Pepperoni Hot Honey Pizza" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--olive">Wood-Fired</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Charred Pepperoni Hot Honey Pizza</h3>
+              <p class="product-card__desc">Crispy cupped pepperoni, San Marzano tomato sauce, fresh smoked mozzarella, and signature charred chili hot honey drizzle.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$21.00</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="hot-honey-amore">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Velvet Oreo Shake -->
+          <article class="product-card" data-category="shakes">
+            <div class="product-card__thumb">
+              <img src="assets/images/shake-thick-oreo.png" alt="Velvet Oreo & Fudge Thick Shake" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--honey">Craft Shake</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Velvet Oreo & Fudge Thick Shake</h3>
+              <p class="product-card__desc">Hand-spun rich vanilla custard blended with real Oreo cookies, dark chocolate fudge drizzle, fluffy whipped cream, and cookie crumbles.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$7.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="shake-thick-oreo">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Margherita DOP -->
+          <article class="product-card" data-category="pizzas">
+            <div class="product-card__thumb">
+              <img src="assets/images/pizza-margherita-card.png" alt="Classica Margherita DOP Pizza" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--olive">Vegetarian</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Classica Margherita DOP Pizza</h3>
+              <p class="product-card__desc">Crushed San Marzano tomatoes, fresh fior di latte mozzarella, fragrant fresh basil, sea salt flakes, and extra virgin olive oil on blistered sourdough.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$18.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="margherita-classica">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: Charred Garlic Knots -->
+          <article class="product-card" data-category="sides">
+            <div class="product-card__thumb">
+              <img src="assets/images/pairing-garlic-knots.png" alt="Charred Herb Garlic Knots" loading="lazy">
+              <div class="product-badge-group">
+                <span class="badge badge--ember">House Side</span>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Charred Herb Garlic Knots</h3>
+              <p class="product-card__desc">Hand-tied dough baked over hardwood heat, tossed in garlic confit butter, Parmigiano Reggiano, and fresh parsley with warm marinara.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">$8.50</span>
+                <button type="button" class="btn btn--primary btn--sm" data-open-customizer="charred-garlic-knots">Customize & Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Promotional Banner (Dark Charcoal Surface) -->
+    <section class="container">
+      <div class="bento-banner">
+        <div class="bento-grid">
+          <div class="bento-content">
+            <span class="bento-tag">Weekend Special</span>
+            <h2 class="bento-title">The Ember Weekend Feast</h2>
+            <p class="bento-desc">
+              Double Flame Smash Burger, 3 crispy golden chicken tenders, loaded bacon fries, two signature house dips, and a thick craft shake for $28. Use code <strong>EMBER20</strong> for 20% off orders over $35.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="pages/deals.html" class="btn btn--primary btn--lg">View Feast Deal</a>
+              <span style="font-size: 0.875rem; color: #DDC8B1;">Available Friday through Sunday for takeout and delivery</span>
+            </div>
+          </div>
+          <div class="bento-visual">
+            <img src="assets/images/combo-feast-box.png" alt="Ultimate Fast Food Combo Feast Box" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Craft Pillars Section -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Kitchen Craft</span>
+          <h2 class="section-title">High Heat, Fresh Daily</h2>
+          <p class="section-subtitle">Fresh smashed Angus beef, 24-hour buttermilk-brined chicken, and sourdough crust blistered at 900°.</p>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11c0-3.87 3.13-7 7-7h4c3.87 0 7 3.13 7 7v1H3v-1z"/>
+                <path d="M4 16h16"/>
+                <path d="M5 20h14a2 2 0 002-2H3a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">High-Heat Angus Smash</h3>
+            <p class="pillar-desc">Fresh Angus beef seared at 650° with sweet butter onions, locking in savory juices and crisp lacy edges.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">24h Buttermilk Crunch</h3>
+            <p class="pillar-desc">Whole chicken cuts brined in spiced buttermilk and double-dredged for a crunchy, seasoned crust.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 23c-4.97 0-9-4.03-9-9 0-3.69 2.27-6.86 5.54-8.19.46-.19.98.05 1.16.51.19.46-.05.98-.51 1.16C6.46 8.58 4.75 11.1 4.75 14c0 4 3.25 7.25 7.25 7.25s7.25-3.25 7.25-7.25c0-1.78-.65-3.41-1.73-4.66-.35-.41-.3-.98.11-1.33.41-.35.98-.3 1.33.11C20.25 9.71 21 11.77 21 14c0 4.97-4.03 9-9 9z"/>
+                <path d="M12 18c-2.21 0-4-1.79-4-4 0-1.63 1-3.03 2.42-3.64.46-.2.98.02 1.18.48.2.46-.02.98-.48 1.18-.76.32-1.37 1.07-1.37 1.98 0 1.24 1.01 2.25 2.25 2.25s2.25-1.01 2.25-2.25c0-.49-.16-.94-.43-1.31-.3-.41-.21-.98.2-1.28.41-.3.98-.21 1.28.2.48.65.75 1.45.75 2.39 0 2.21-1.79 4-4 4z"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">900° Wood-Fired Hearth</h3>
+            <p class="pillar-desc">Naturally fermented sourdough hand-stretched and charred over oak embers for fast-baked slices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section">
+      <div class="container story-grid">
+        <div class="story-media">
+          <img src="assets/images/neighborhood-pizzeria-interior.png" alt="EmberBite lively open flame kitchen and burger counter" loading="lazy">
+        </div>
+        <div class="story-content">
+          <span class="section-eyebrow">Carroll Gardens, Brooklyn</span>
+          <h2>Real Fire, Scratch Kitchen</h2>
+          <p>
+            EmberBite began on DeGraw Street with a straightforward standard: fast casual food should be cooked fresh from raw ingredients over open fire. Founders Luca and Mia brought their wood-fired cooking background to smash burgers, buttermilk crispy chicken, and blistered pizzas.
+          </p>
+          <p>
+            Every patty is smashed on screaming hot cast griddles, chicken is soaked in spiced buttermilk for 24 hours, and pizzas bake at 900° on hardwood oak embers.
+          </p>
+          <div style="margin-top: 2rem;">
+            <a href="pages/about.html" class="btn btn--outline btn--lg">Read Our Story →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Customer Reviews Section -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Guest Notes</span>
+          <h2 class="section-title">From the Neighborhood</h2>
+          <p class="section-subtitle">Recent orders and feedback from our Carroll Gardens dining room and delivery regulars.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">"The double smash burger has the crispiest lacy edges in the neighborhood, and the hot honey tenders hold their crunch even on delivery."</p>
+            </div>
+            <div class="review-author">
+              <div class="review-author-avatar">RK</div>
+              <div>
+                <p class="review-author-name">Rachel Kim</p>
+                <p class="review-author-meta">Carroll Gardens Regular • 2 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">"Our Friday family go-to. The loaded bacon fries and tenders arrived hot within 25 minutes, and the wood-fired pepperoni slice is top tier."</p>
+            </div>
+            <div class="review-author">
+              <div class="review-author-avatar">DT</div>
+              <div>
+                <p class="review-author-name">David Thorne</p>
+                <p class="review-author-meta">Verified Order • 1 week ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">"Having proper high-heat smash burgers and blistered sourdough pizza coming out of the same kitchen makes Friday dinner easy for everyone."</p>
+            </div>
+            <div class="review-author">
+              <div class="review-author-avatar">JR</div>
+              <div>
+                <p class="review-author-name">Julian Rossi</p>
+                <p class="review-author-meta">Dine-in Customer • 2 weeks ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="pages/reviews.html" class="btn btn--secondary">Read All Reviews →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP Newsletter Bar -->
+    <section class="container">
+      <div class="newsletter-bar">
+        <span class="section-eyebrow">Neighborhood List</span>
+        <h2 class="section-title" style="margin-bottom: 0.5rem;">Specials & Kitchen News</h2>
+        <p class="section-subtitle">Subscribe for seasonal menu updates, weekend feast drops, and neighborhood events.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); EmberBite.showToast('Subscribed to the neighborhood list. Thank you.'); this.reset();">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logos/emberbite-wordmark.svg" alt="EmberBite" style="filter: brightness(0) invert(1);" width="180" height="38">
+        <p>
+          Artisanal flame smash burgers, buttermilk crispy fried chicken, loaded bacon fries, and 900° wood-fired pizzas crafted in Carroll Gardens, Brooklyn.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="pages/menu.html" class="footer-link">Full Menu</a></li>
+          <li><a href="pages/deals.html" class="footer-link">Hot Deals & Combos</a></li>
+          <li><a href="pages/about.html" class="footer-link">Our Story & Craft</a></li>
+          <li><a href="pages/catering.html" class="footer-link">Catering & Feasts</a></li>
+          <li><a href="pages/reviews.html" class="footer-link">Customer Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Hours & Locations</h4>
+        <ul class="footer-links">
+          <li style="color: #FFFFFF; font-weight: 600;">Carroll Gardens (Flagship)</li>
+          <li>182 DeGraw St, Brooklyn, NY</li>
+          <li>Mon–Sun: 12:00 PM – 10:30 PM</li>
+          <li style="margin-top: 0.5rem; color: #FFFFFF; font-weight: 600;">West Village Outpost</li>
+          <li>414 Hudson St, New York, NY</li>
+          <li>Tue–Sun: 12:00 PM – 11:00 PM</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact & Help</h4>
+        <ul class="footer-links">
+          <li><a href="pages/contact.html" class="footer-link">Contact & Inquiries</a></li>
+          <li><a href="tel:7185550192" class="footer-link">Call: (718) 555-0192</a></li>
+          <li><a href="mailto:hello@emberbite.com" class="footer-link">hello@emberbite.com</a></li>
+          <li><a href="pages/cart.html" class="footer-link">View Order Bag</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 EmberBite LLC. All rights reserved.</p>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="#" class="footer-link">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Order Bag Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-labelledby="drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <h3 id="drawer-title" class="drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+        </svg>
+        <span>Your Order Bag</span>
+      </h3>
+      <button type="button" id="drawer-close-btn" class="drawer-close-btn" aria-label="Close Order Bag">✕</button>
+    </div>
+
+    <div id="drawer-items" class="drawer-body">
+      <!-- Populated dynamically via js/app.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <form id="drawer-promo-form" class="promo-form">
+        <input type="text" id="promo-code-input" class="promo-input" placeholder="Promo Code (e.g. EMBER20)" aria-label="Promo code">
+        <button type="submit" class="btn btn--secondary btn--sm">Apply</button>
+      </form>
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <span id="drawer-subtotal">$0.00</span>
+      </div>
+      <div class="drawer-summary-row" id="drawer-discount-row" style="display: none; color: var(--color-olive);">
+        <span>Promo Discount</span>
+        <span id="drawer-discount">-$0.00</span>
+      </div>
+      <div class="drawer-summary-row">
+        <span>Estimated Delivery</span>
+        <span id="drawer-delivery">$3.99</span>
+      </div>
+      <div class="drawer-summary-row drawer-summary-row--total">
+        <span>Estimated Total</span>
+        <span id="drawer-total">$0.00</span>
+      </div>
+      <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        <a href="pages/checkout.html" class="btn btn--primary btn--full btn--lg">Proceed to Checkout →</a>
+        <a href="pages/cart.html" class="btn btn--secondary btn--full btn--sm" style="text-align: center;">View Full Bag Details</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Native HTML5 Item Customization Modal (<dialog>) -->
+  <dialog id="customization-modal" class="customization-modal" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img id="modal-img" src="assets/images/pizza-hot-honey-card.png" alt="Food item" class="modal-hero-img">
+        <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-scroll-body">
+        <h3 id="modal-title" class="modal-item-title">Item Title</h3>
+        <p id="modal-desc" class="modal-item-desc">Item detailed description</p>
+
+        <!-- Size Selection -->
+        <div class="custom-section">
+          <h4 class="custom-section-title">1. Select Size (Required)</h4>
+          <div id="modal-sizes-group" class="options-pill-group">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Crust Selection -->
+        <div class="custom-section">
+          <h4 class="custom-section-title">2. Choose Dough & Crust</h4>
+          <select id="modal-crust-select" style="width: 100%; padding: 0.625rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: var(--color-cream);" aria-label="Choose Dough & Crust">
+            <!-- Dynamically populated -->
+          </select>
+        </div>
+
+        <!-- Toppings Addons -->
+        <div class="custom-section">
+          <h4 class="custom-section-title">3. Extra Toppings & Artisanal Finishes</h4>
+          <div id="modal-toppings-group" class="topping-checkbox-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="custom-section" style="border-bottom: none; margin-bottom: 0;">
+          <h4 class="custom-section-title">4. Cooking Notes / Allergies</h4>
+          <textarea id="modal-instructions" class="instructions-textarea" placeholder="e.g. Extra well-done char, cut into 8 slices, dressing on the side..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-qty-counter">
+          <button type="button" id="modal-qty-minus" style="font-size: 1.1rem; padding: 0 4px;" aria-label="Decrease quantity">-</button>
+          <span id="modal-qty-val" style="font-weight: bold; min-width: 18px; text-align: center;">1</span>
+          <button type="button" id="modal-qty-plus" style="font-size: 1.1rem; padding: 0 4px;" aria-label="Increase quantity">+</button>
+        </div>
+        <button type="button" id="modal-add-btn" class="btn btn--primary btn--lg" style="flex-grow: 1;">Add to Bag • $0.00</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Vanilla JS Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Order Bag — EmberBite Pizzeria</title>
+  <meta name="description" content="Review your wood-fired pizza and flame dishes in your EmberBite order bag before checkout.">
+  <link rel="icon" type="image/svg+xml" href="../assets/logos/emberbite-flame-seal.svg">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <span>Flame smash burgers, crispy chicken & wood-fired pizza &nbsp;•&nbsp; <strong>Code "EMBER20" for 20% off feasts</strong> &nbsp;•&nbsp; Delivery in 25–35 min</span>
+  </div>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="brand-link" aria-label="EmberBite Home">
+        <img src="../assets/logos/emberbite-wordmark.svg" alt="EmberBite" class="brand-logo" width="180" height="38">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="menu.html" class="nav-link">The Menu</a>
+        <a href="deals.html" class="nav-link">Hot Deals</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="stores.html" class="nav-link">Locations</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="catering.html" class="nav-link">Catering</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="menu.html" class="btn btn--primary btn--sm">Add More Items</a>
+
+        <button type="button" class="mobile-menu-btn" data-mobile-menu-toggle aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="section-header" style="text-align: left;">
+          <span class="section-eyebrow">Review Your Selection</span>
+          <h1 class="section-title">Your Order Bag</h1>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 3rem; align-items: start;" class="cart-page-layout">
+          <!-- Cart Items Column -->
+          <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-subtle);">
+            <div id="cart-page-items">
+              <!-- Dynamically populated -->
+            </div>
+            <div style="margin-top: 1.5rem; text-align: left;">
+              <a href="menu.html" style="font-size: 0.875rem; color: var(--color-ember); font-weight: 600;">← Back to Menu to add more items</a>
+            </div>
+          </div>
+
+          <!-- Summary Column -->
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 2rem;">
+            <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem;">Order Summary</h2>
+
+            <form id="cart-page-promo" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;" onsubmit="event.preventDefault(); applyPagePromo();">
+              <input type="text" id="cart-promo-code" class="promo-input" placeholder="Promo code (e.g. EMBER20)" aria-label="Promo code">
+              <button type="submit" class="btn btn--secondary btn--sm">Apply</button>
+            </form>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Subtotal</span>
+                <strong id="cart-page-subtotal" style="color: var(--text-primary);">$0.00</strong>
+              </div>
+              <div style="display: none; justify-content: space-between; color: var(--color-olive);" id="cart-page-discount-row">
+                <span>Discount</span>
+                <strong id="cart-page-discount">-$0.00</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Delivery Fee</span>
+                <strong id="cart-page-delivery">$3.99</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Estimated Tax (8.875%)</span>
+                <strong id="cart-page-tax">$0.00</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: bold; color: var(--text-primary); padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                <span>Estimated Total</span>
+                <span id="cart-page-total" style="color: var(--color-ember);">$0.00</span>
+              </div>
+            </div>
+
+            <a href="checkout.html" class="btn btn--primary btn--full btn--lg">Proceed to Checkout →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logos/emberbite-wordmark.svg" alt="EmberBite" style="filter: brightness(0) invert(1);" width="180" height="38">
+        <p>Artisanal 900° wood-fired Neapolitan pizza, flame-grilled burgers, and handmade dough crafted in Carroll Gardens, Brooklyn.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html" class="footer-link">Full Menu</a></li>
+          <li><a href="deals.html" class="footer-link">Hot Deals & Combos</a></li>
+          <li><a href="about.html" class="footer-link">Our Story & Craft</a></li>
+          <li><a href="catering.html" class="footer-link">Catering & Feasts</a></li>
+          <li><a href="reviews.html" class="footer-link">Customer Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Hours & Locations</h4>
+        <ul class="footer-links">
+          <li style="color: #FFFFFF; font-weight: 600;">Carroll Gardens (Flagship)</li>
+          <li>182 DeGraw St, Brooklyn, NY</li>
+          <li>Mon–Sun: 12:00 PM – 10:30 PM</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact & Help</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html" class="footer-link">Contact & Inquiries</a></li>
+          <li><a href="tel:7185550192" class="footer-link">Call: (718) 555-0192</a></li>
+          <li><a href="cart.html" class="footer-link">View Order Bag</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 EmberBite LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS Scripts -->
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    function renderFullCartPage() {
+      const cart = window.EmberBite.getCart();
+      const container = document.getElementById('cart-page-items');
+      if (!container) return;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 3rem 1rem;">
+            <p style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.5rem;">Your Order Bag is currently empty.</p>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Explore our flame smash burgers, crispy chicken, and loaded fries.</p>
+            <a href="menu.html" class="btn btn--primary">Browse Menu</a>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map(item => `
+        <div style="display: grid; grid-template-columns: 80px 1fr auto; gap: 1.5rem; align-items: center; padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-subtle);">
+          <img src="${window.EmberBite ? window.EmberBite.resolveImagePath(item.image) : item.image}" alt="${item.name}" style="width: 80px; height: 80px; border-radius: var(--radius-md); object-fit: cover;">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.25rem;">${item.name}</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">${item.size} • ${item.crust}${item.toppings.length ? '<br>+' + item.toppings.join(', ') : ''}</p>
+            <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.875rem;">Qty: <strong>${item.quantity}</strong></span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 1.125rem; font-weight: bold; color: var(--color-ember);">$${(item.unitPrice * item.quantity).toFixed(2)}</div>
+          </div>
+        </div>
+      `).join('');
+
+      // Update Summary Values
+      const subtotal = cart.reduce((sum, i) => sum + (i.unitPrice * i.quantity), 0);
+      const delivery = subtotal > 45 || subtotal === 0 ? 0 : 3.99;
+      const tax = subtotal * 0.08875;
+      const total = subtotal + delivery + tax;
+
+      document.getElementById('cart-page-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('cart-page-delivery').textContent = delivery === 0 ? 'FREE' : `$${delivery.toFixed(2)}`;
+      document.getElementById('cart-page-tax').textContent = `$${tax.toFixed(2)}`;
+      document.getElementById('cart-page-total').textContent = `$${total.toFixed(2)}`;
+    }
+
+    function applyPagePromo() {
+      const code = document.getElementById('cart-promo-code').value.trim().toUpperCase();
+      const deal = window.EMBER_DATA.deals.find(d => d.code === code);
+      if (deal) {
+        localStorage.setItem('emberbite_promo', JSON.stringify(deal));
+        window.EmberBite.showToast(`Applied ${code}!`);
+        renderFullCartPage();
+      } else {
+        window.EmberBite.showToast('Invalid code. Try EMBER20');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', renderFullCartPage);
+  </script>
+</body>
+</html>

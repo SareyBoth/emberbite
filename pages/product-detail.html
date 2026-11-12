@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Item — EmberBite Flame Fast Food</title>
+  <meta name="description" content="Customize your flame smash burger, crispy fried chicken, loaded fries, or wood-fired pizza with fresh toppings and sides.">
+  <link rel="icon" type="image/svg+xml" href="../assets/logos/emberbite-flame-seal.svg">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <span>Flame smash burgers, crispy chicken & wood-fired pizza &nbsp;•&nbsp; <strong>Code "EMBER20" for 20% off feasts</strong> &nbsp;•&nbsp; Delivery in 25–35 min</span>
+  </div>
+
+  <!-- Primary Site Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="brand-link" aria-label="EmberBite Home">
+        <img src="../assets/logos/emberbite-wordmark.svg" alt="EmberBite" class="brand-logo" width="180" height="38">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="menu.html" class="nav-link">The Menu</a>
+        <a href="deals.html" class="nav-link">Hot Deals</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="stores.html" class="nav-link">Locations</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="catering.html" class="nav-link">Catering</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-toggle-btn" data-cart-toggle aria-label="View Order Bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span>Order Bag</span>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="menu.html" class="btn btn--primary btn--sm">Order Now</a>
+
+        <button type="button" class="mobile-menu-btn" data-mobile-menu-toggle aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+          <a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="menu.html">Menu</a> &nbsp;/&nbsp; <span id="detail-breadcrumb" style="color: var(--text-primary); font-weight: 600;">Ember Hot Honey Amore</span>
+        </nav>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start;" class="product-detail-layout">
+          <!-- Left Column: Item Visual & Nutrition -->
+          <div>
+            <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-card); background: var(--color-parchment);">
+              <img id="detail-img" src="../assets/images/pizza-hot-honey-card.png" alt="Ember Hot Honey Amore Pizza" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+
+            <div style="margin-top: 2rem; background: var(--bg-elevated); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+              <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 1rem;">Culinary & Dietary Profile</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.875rem;">
+                <div><strong>Fermentation:</strong> 48h Natural Cold Proof</div>
+                <div><strong>Oven Temp:</strong> 900° Hardwood Fire</div>
+                <div><strong>Bake Time:</strong> 85–90 Seconds</div>
+                <div><strong>Allergens:</strong> Wheat, Dairy</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Customization Controls -->
+          <div style="background: var(--bg-elevated); padding: 2rem; border-radius: var(--radius-xl); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-subtle);">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+              <span class="badge badge--ember">House Selection</span>
+              <span style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 500;">4.9 rating · 420 reviews</span>
+            </div>
+
+            <h1 id="detail-title" style="font-family: var(--font-display); font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 0.5rem;">Ember Hot Honey Amore</h1>
+            <p id="detail-desc" style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+              Slow-proofed dough, crushed San Marzano DOP tomatoes, fresh smoked mozzarella, spicy cupped pepperoni crisps, and our signature charred chili hot honey drizzle.
+            </p>
+
+            <form id="standalone-customizer-form">
+              <!-- Size Selection -->
+              <div class="custom-section">
+                <h4 class="custom-section-title">1. Select Size (Required)</h4>
+                <div class="options-pill-group" id="detail-sizes">
+                  <label class="option-radio-label is-selected">
+                    <input type="radio" name="detail-size" value="Personal 10&quot;" data-extra="0" checked>
+                    <span>Personal 10"</span>
+                  </label>
+                  <label class="option-radio-label">
+                    <input type="radio" name="detail-size" value="Medium 12&quot;" data-extra="4.00">
+                    <span>Medium 12" (+$4.00)</span>
+                  </label>
+                  <label class="option-radio-label">
+                    <input type="radio" name="detail-size" value="Large 14&quot;" data-extra="8.00">
+                    <span>Large 14" (+$8.00)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Dough & Crust Selection -->
+              <div class="custom-section">
+                <h4 class="custom-section-title">2. Choose Dough & Crust</h4>
+                <select id="detail-crust" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: var(--color-cream);" aria-label="Choose Dough & Crust">
+                  <option value="Classic Wood-Fired Neapolitan">Classic Wood-Fired Neapolitan</option>
+                  <option value="Thin & Charred Crispy">Thin & Charred Crispy</option>
+                  <option value="Double-Fermented Sourdough">Double-Fermented Sourdough</option>
+                </select>
+              </div>
+
+              <!-- Extra Toppings -->
+              <div class="custom-section">
+                <h4 class="custom-section-title">3. Add Extra Artisanal Toppings</h4>
+                <div class="topping-checkbox-list">
+                  <label class="topping-label">
+                    <div class="topping-left">
+                      <input type="checkbox" name="detail-topping" value="Smoked Buffalo Mozzarella" data-price="2.50">
+                      <span>Smoked Buffalo Mozzarella</span>
+                    </div>
+                    <strong>+$2.50</strong>
+                  </label>
+                  <label class="topping-label">
+                    <div class="topping-left">
+                      <input type="checkbox" name="detail-topping" value="Extra Hot Honey Drizzle" data-price="1.50">
+                      <span>Extra Hot Honey Drizzle</span>
+                    </div>
+                    <strong>+$1.50</strong>
+                  </label>
+                  <label class="topping-label">
+                    <div class="topping-left">
+                      <input type="checkbox" name="detail-topping" value="Charred Calabrian Chilies" data-price="1.75">
+                      <span>Charred Calabrian Chilies</span>
+                    </div>
+                    <strong>+$1.75</strong>
+                  </label>
+                  <label class="topping-label">
+                    <div class="topping-left">
+                      <input type="checkbox" name="detail-topping" value="Crispy Cupped Pepperoni" data-price="3.00">
+                      <span>Crispy Cupped Pepperoni</span>
+                    </div>
+                    <strong>+$3.00</strong>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Cooking Notes -->
+              <div class="custom-section" style="border-bottom: none;">
+                <h4 class="custom-section-title">4. Special Instructions</h4>
+                <textarea id="detail-instructions" class="instructions-textarea" placeholder="e.g. Extra well-done char, cut into 8 slices..."></textarea>
+              </div>
+
+              <!-- Price & Add Button -->
+              <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+                <div class="modal-qty-counter">
+                  <button type="button" id="detail-minus" style="font-size: 1.1rem; padding: 0 4px;" aria-label="Decrease quantity">-</button>
+                  <span id="detail-qty-val" style="font-weight: bold; min-width: 18px; text-align: center;">1</span>
+                  <button type="button" id="detail-plus" style="font-size: 1.1rem; padding: 0 4px;" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="submit" id="detail-submit-btn" class="btn btn--primary btn--lg" style="flex-grow: 1;">
+                  Add to Order Bag • $22.00
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logos/emberbite-wordmark.svg" alt="EmberBite" style="filter: brightness(0) invert(1);" width="180" height="38">
+        <p>Artisanal 900° wood-fired Neapolitan pizza, flame-grilled burgers, and handmade dough crafted in Carroll Gardens, Brooklyn.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="menu.html" class="footer-link">Full Menu</a></li>
+          <li><a href="deals.html" class="footer-link">Hot Deals & Combos</a></li>
+          <li><a href="about.html" class="footer-link">Our Story & Craft</a></li>
+          <li><a href="catering.html" class="footer-link">Catering & Feasts</a></li>
+          <li><a href="reviews.html" class="footer-link">Customer Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Hours & Locations</h4>
+        <ul class="footer-links">
+          <li style="color: #FFFFFF; font-weight: 600;">Carroll Gardens (Flagship)</li>
+          <li>182 DeGraw St, Brooklyn, NY</li>
+          <li>Mon–Sun: 12:00 PM – 10:30 PM</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact & Help</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html" class="footer-link">Contact & Inquiries</a></li>
+          <li><a href="tel:7185550192" class="footer-link">Call: (718) 555-0192</a></li>
+          <li><a href="cart.html" class="footer-link">View Order Bag</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 EmberBite LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Order Bag Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-labelledby="drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <h3 id="drawer-title" class="drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+        </svg>
+        <span>Your Order Bag</span>
+      </h3>
+      <button type="button" id="drawer-close-btn" class="drawer-close-btn" aria-label="Close Order Bag">✕</button>
+    </div>
+    <div id="drawer-items" class="drawer-body"></div>
+    <div class="drawer-footer">
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <span id="drawer-subtotal">$0.00</span>
+      </div>
+      <div class="drawer-summary-row drawer-summary-row--total">
+        <span>Estimated Total</span>
+        <span id="drawer-total">$0.00</span>
+      </div>
+      <div style="margin-top: 1rem;">
+        <a href="checkout.html" class="btn btn--primary btn--full btn--lg">Proceed to Checkout →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Vanilla JS Scripts -->
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script>
+    // Standalone page live recalculation script
+    (function() {
+      let basePrice = 15.50;
+      let activeItemId = 'flame-craft-burger';
+
+      // Check URL param ?id=
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramId = urlParams.get('id');
+      if (window.EMBER_DATA) {
+        const targetId = paramId || 'flame-craft-burger';
+        const found = window.EMBER_DATA.items.find(i => i.id === targetId) || window.EMBER_DATA.items[0];
+        if (found) {
+          activeItemId = found.id;
+          basePrice = found.basePrice;
+          document.getElementById('detail-title').textContent = found.name;
+          document.getElementById('detail-breadcrumb').textContent = found.name;
+          document.getElementById('detail-desc').textContent = found.description;
+          document.getElementById('detail-img').src = '../' + found.image;
+          document.getElementById('detail-img').alt = found.name;
+
+          // Populate sizes
+          const sizesContainer = document.getElementById('detail-sizes');
+          if (sizesContainer && found.sizes) {
+            sizesContainer.innerHTML = found.sizes.map((s, idx) => `
+              <label class="option-radio-label ${idx === 0 ? 'is-selected' : ''}">
+                <input type="radio" name="detail-size" value="${s.name}" data-extra="${s.extra}" ${idx === 0 ? 'checked' : ''}>
+                <span>${s.name} ${s.extra > 0 ? '(+$' + s.extra.toFixed(2) + ')' : ''}</span>
+              </label>
+            `).join('');
+          }
+
+          // Populate crusts / bread
+          const crustSelect = document.getElementById('detail-crust');
+          if (crustSelect && found.crusts) {
+            crustSelect.innerHTML = found.crusts.map(c => `<option value="${c}">${c}</option>`).join('');
+          }
+
+          // Populate toppings
+          const toppingsList = document.querySelector('.topping-checkbox-list');
+          if (toppingsList && found.toppings) {
+            toppingsList.innerHTML = found.toppings.map(t => `
+              <label class="topping-label">
+                <div class="topping-left">
+                  <input type="checkbox" name="detail-topping" value="${t.name}" data-price="${t.price}">
+                  <span>${t.name}</span>
+                </div>
+                <strong>+$${t.price.toFixed(2)}</strong>
+              </label>
+            `).join('');
+          }
+        }
+      }
+
+      function updatePagePrice() {
+        let unit = basePrice;
+        const selectedSize = document.querySelector('input[name="detail-size"]:checked');
+        if (selectedSize) unit += parseFloat(selectedSize.dataset.extra || 0);
+
+        document.querySelectorAll('input[name="detail-topping"]:checked').forEach(t => {
+          unit += parseFloat(t.dataset.price || 0);
+        });
+
+        const qty = parseInt(document.getElementById('detail-qty-val').textContent, 10);
+        const total = unit * qty;
+        document.getElementById('detail-submit-btn').textContent = `Add to Order Bag • $${total.toFixed(2)}`;
+      }
+
+      // Bind size pill events
+      document.querySelectorAll('#detail-sizes .option-radio-label').forEach(lbl => {
+        lbl.addEventListener('click', () => {
+          document.querySelectorAll('#detail-sizes .option-radio-label').forEach(l => l.classList.remove('is-selected'));
+          lbl.classList.add('is-selected');
+          updatePagePrice();
+        });
+      });
+
+      // Bind toppings checkboxes
+      document.querySelectorAll('input[name="detail-topping"]').forEach(cb => {
+        cb.addEventListener('change', updatePagePrice);
+      });
+
+      // Stepper
+      document.getElementById('detail-minus').addEventListener('click', () => {
+        const valEl = document.getElementById('detail-qty-val');
+        let q = parseInt(valEl.textContent, 10);
+        if (q > 1) {
+          valEl.textContent = q - 1;
+          updatePagePrice();
+        }
+      });
+
+      document.getElementById('detail-plus').addEventListener('click', () => {
+        const valEl = document.getElementById('detail-qty-val');
+        let q = parseInt(valEl.textContent, 10);
+        valEl.textContent = q + 1;
+        updatePagePrice();
+      });
+
+      // Submit Form
+      document.getElementById('standalone-customizer-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const selectedSize = document.querySelector('input[name="detail-size"]:checked').value;
+        const selectedCrust = document.getElementById('detail-crust').value;
+        const selectedToppings = Array.from(document.querySelectorAll('input[name="detail-topping"]:checked')).map(t => t.value);
+        const instructions = document.getElementById('detail-instructions').value;
+        const qty = parseInt(document.getElementById('detail-qty-val').textContent, 10);
+
+        let unit = basePrice;
+        const selectedSizeInput = document.querySelector('input[name="detail-size"]:checked');
+        if (selectedSizeInput) unit += parseFloat(selectedSizeInput.dataset.extra || 0);
+        document.querySelectorAll('input[name="detail-topping"]:checked').forEach(t => {
+          unit += parseFloat(t.dataset.price || 0);
+        });
+
+        const currentItem = window.EMBER_DATA.items.find(i => i.id === activeItemId);
+
+        window.EmberBite.addItemToCart({
+          id: activeItemId,
+          name: currentItem.name,
+          image: '../' + currentItem.image,
+          unitPrice: unit,
+          size: selectedSize,
+          crust: selectedCrust,
+          toppings: selectedToppings,
+          instructions: instructions,
+          quantity: qty
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

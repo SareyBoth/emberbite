@@ -1,0 +1,139 @@
+{
+  "communities": {
+    "0": [
+      "json",
+      "re",
+      "scratch_inspect_design_page",
+      "scratch_inspect_early_args",
+      "scratch_inspect_embed",
+      "scratch_inspect_embed2",
+      "scratch_inspect_figma_keys",
+      "scratch_inspect_initial_options",
+      "scratch_parse_figma_json"
+    ],
+    "1": [
+      "js_app_calculatetotals",
+      "js_app_getcart",
+      "js_app_removeitemfromcart",
+      "js_app_savecart",
+      "js_app_updatecartui",
+      "js_app_updateitemquantity"
+    ],
+    "2": [
+      "js_app",
+      "js_app_closecartdrawer",
+      "js_app_getappliedpromo",
+      "js_app_initmenufilters",
+      "js_app_savepromo"
+    ],
+    "3": [
+      "os",
+      "pil",
+      "scratch_crop_frames",
+      "scratch_crop_styleguide"
+    ],
+    "4": [
+      "js_app_additemtocart",
+      "js_app_opencartdrawer",
+      "js_app_showtoast"
+    ],
+    "5": [
+      "js_app_bindcustomizertriggers",
+      "js_app_opencustomizer",
+      "js_app_updatemodalprice"
+    ],
+    "6": [
+      "js_data",
+      "js_data_ember_data"
+    ]
+  },
+  "cohesion": {
+    "0": 0.3055555555555556,
+    "1": 0.6666666666666666,
+    "2": 0.4,
+    "3": 0.5,
+    "4": 0.6666666666666666,
+    "5": 0.6666666666666666,
+    "6": 1.0
+  },
+  "gods": [
+    {
+      "id": "js_app_updatecartui",
+      "label": "updateCartUI()",
+      "degree": 7
+    },
+    {
+      "id": "js_app_getcart",
+      "label": "getCart()",
+      "degree": 6
+    },
+    {
+      "id": "js_app_savecart",
+      "label": "saveCart()",
+      "degree": 5
+    },
+    {
+      "id": "js_app_additemtocart",
+      "label": "addItemToCart()",
+      "degree": 5
+    },
+    {
+      "id": "js_app_calculatetotals",
+      "label": "calculateTotals()",
+      "degree": 4
+    },
+    {
+      "id": "js_app_updateitemquantity",
+      "label": "updateItemQuantity()",
+      "degree": 4
+    },
+    {
+      "id": "js_app_removeitemfromcart",
+      "label": "removeItemFromCart()",
+      "degree": 4
+    },
+    {
+      "id": "js_app_opencustomizer",
+      "label": "openCustomizer()",
+      "degree": 3
+    },
+    {
+      "id": "js_app_getappliedpromo",
+      "label": "getAppliedPromo()",
+      "degree": 2
+    },
+    {
+      "id": "js_app_savepromo",
+      "label": "savePromo()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "addItemToCart()",
+      "target": "getCart()",
+      "source_files": [
+        "js/app.js",
+        "js/app.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 1 \u2192 community 4"
+    },
+    {
+      "source": "calculateTotals()",
+      "target": "getAppliedPromo()",
+      "source_files": [
+        "js/app.js",
+        "js/app.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 2 \u2192 community 1"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

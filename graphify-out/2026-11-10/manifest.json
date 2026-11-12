@@ -1,0 +1,82 @@
+{
+  ".agents/mcp_config.json": {
+    "mtime": 1794207251.6220114,
+    "seen": 1794301923.4800549,
+    "ast_hash": "0d04f4283a8cfd26e1a6b124fb95ea69",
+    "semantic_hash": "0d04f4283a8cfd26e1a6b124fb95ea69",
+    "ast_empty": true
+  },
+  "scratch/crop_frames.py": {
+    "mtime": 1794300322.371782,
+    "seen": 1794301923.4800692,
+    "ast_hash": "c92e9f6ab97a5050b2909852aa10ea2a",
+    "semantic_hash": "c92e9f6ab97a5050b2909852aa10ea2a"
+  },
+  "scratch/crop_styleguide.py": {
+    "mtime": 1794300892.6640563,
+    "seen": 1794301923.481169,
+    "ast_hash": "e5d0d595d9c78e590aa886a4a8c4fbef",
+    "semantic_hash": "e5d0d595d9c78e590aa886a4a8c4fbef"
+  },
+  "scratch/figma_file_data.json": {
+    "mtime": 1794299894.436562,
+    "seen": 1794301923.482125,
+    "ast_hash": "8822ef32c0fc424aa66942ec706ab664",
+    "semantic_hash": "8822ef32c0fc424aa66942ec706ab664",
+    "ast_empty": true
+  },
+  "scratch/inspect_design_page.py": {
+    "mtime": 1794299846.374817,
+    "seen": 1794301923.4821346,
+    "ast_hash": "db1240563251e467b3763e6c87263a3d",
+    "semantic_hash": "db1240563251e467b3763e6c87263a3d"
+  },
+  "scratch/inspect_early_args.py": {
+    "mtime": 1794299996.0595088,
+    "seen": 1794301923.4833431,
+    "ast_hash": "8cfd8d3aa1eeaf3b485132e9b18add7d",
+    "semantic_hash": "8cfd8d3aa1eeaf3b485132e9b18add7d"
+  },
+  "scratch/inspect_embed.py": {
+    "mtime": 1794299726.5789714,
+    "seen": 1794301923.4843884,
+    "ast_hash": "5fc725bc915eae08b0d1b292e323b99b",
+    "semantic_hash": "5fc725bc915eae08b0d1b292e323b99b"
+  },
+  "scratch/inspect_embed2.py": {
+    "mtime": 1794299761.5561278,
+    "seen": 1794301923.4851546,
+    "ast_hash": "c32e46a9a8cb0777f387a36cf3c577ea",
+    "semantic_hash": "c32e46a9a8cb0777f387a36cf3c577ea"
+  },
+  "scratch/inspect_figma_keys.py": {
+    "mtime": 1794299949.3761067,
+    "seen": 1794301923.4859083,
+    "ast_hash": "2dbcb455a25135b137fd615a5cdb2356",
+    "semantic_hash": "2dbcb455a25135b137fd615a5cdb2356"
+  },
+  "scratch/inspect_initial_options.py": {
+    "mtime": 1794299802.973142,
+    "seen": 1794301923.486551,
+    "ast_hash": "d1cc7b6a420ba256e6a170acbcdf5578",
+    "semantic_hash": "d1cc7b6a420ba256e6a170acbcdf5578"
+  },
+  "scratch/parse_figma_json.py": {
+    "mtime": 1794299869.7101347,
+    "seen": 1794301923.487085,
+    "ast_hash": "cba24c6218a152610e7b6cbd5c718828",
+    "semantic_hash": "cba24c6218a152610e7b6cbd5c718828"
+  },
+  "js/app.js": {
+    "mtime": 1794302354.537314,
+    "seen": 1794303104.6767287,
+    "ast_hash": "0035f80f0ab3c6ef5e54e67fb721b903",
+    "semantic_hash": "0035f80f0ab3c6ef5e54e67fb721b903"
+  },
+  "js/data.js": {
+    "mtime": 1794302291.8790438,
+    "seen": 1794303104.6767347,
+    "ast_hash": "b59185f47d683a3aa8f68d5fc7b4e991",
+    "semantic_hash": "b59185f47d683a3aa8f68d5fc7b4e991"
+  }
+}
